@@ -1,12 +1,16 @@
 <html>
   <header>
+    <script>
+      window.addEventListener("load", function(){
+        if(Math.floor(Math.random() * 2)==1){
+          document.getElementById('mySrc').src="http://thecatapi.com/api/images/get?format=src&type=gif";
+        } else {
+          document.getElementById('mySrc').src="TEST";
+        }  
+      });
+    </script>
   </header>
   <body>
-    <img src="http://thecatapi.com/api/images/get?format=src&type=gif" alt="Alternative Cat">
-    <script>
-      function loadImage() {
-        alert("Image is loaded");
-      }
-    </script>
+    <img id="mySrc" src="http://thecatapi.com/api/images/get?format=src&type=gif" alt="Alternative Cat">
   </body>
 </html>  
